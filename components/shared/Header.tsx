@@ -22,17 +22,38 @@ const Header = () => {
                             (<Image src="/up-arrow.svg" alt='up-arrow' width={13} height={13} />)
                     }
                 </div>
-                { toggle && (
-                        <div className="absolute top-full left-0 bg-gray-500 shadow-lg rounded-md mt-2 p-3">
-                            Content to be displayed on toggle
-                        </div>
+                {toggle && (
+                    <div className="absolute top-full left-0 bg-gray-500 shadow-lg rounded-md mt-2 p-3">
+                        Content to be displayed on toggle
+                    </div>
                 )}
                 <div>
                     <DarkModeIcon />
                 </div>
             </div>
+            {
+                toggle && (
+                    <section className='absolute bg-white flex flex-col gap-4 border-2 shadow-lg rounded-md overflow-hidden left-0 top-16 ml-8 px-12 py-5'>
+                        <div className='flex gap-10 items-center justify-between'>
+                            <h3 className='text-gray-500'>Grouping</h3>
+                            <select value="" className='bg-white border-2 px-2 border-gray-400 rounded-lg'>
+                                <option value="status">Status</option>
+                                <option value="user">User</option>
+                                <option value="priority">Priority</option>
+                            </select>
+                        </div>
+                        <div className='flex gap-10 items-center justify-between'>
+                            <h3 className='text-gray-500'>Ordering</h3>
+                            <select value="" className='bg-white border-2 px-2 border-gray-400 rounded-lg '>
+                                <option value="priority">Priority</option>
+                                <option value="title">Title</option>
+                            </select>
+                        </div>
+                    </section>
+                )
+            }
         </header>
-        
+
     )
 }
 
