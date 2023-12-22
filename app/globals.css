@@ -86,3 +86,9 @@
     padding: 10px 0;
   }
 }
+
+@media (max-width: 1200px){
+   main .wrapper {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
