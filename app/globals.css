@@ -74,3 +74,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities{
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    width: 97%;
+    margin: 0 auto;
+    min-height: 92vh;
+    padding: 10px 0;
+  }
+}
